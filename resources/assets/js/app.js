@@ -18,6 +18,8 @@ import CompaniesIndex from './components/companies/CompaniesIndex.vue';
 import CompaniesCreate from './components/companies/CompaniesCreate.vue';
 import CompaniesEdit from './components/companies/CompaniesEdit.vue';
 
+import MainScreen from './components/admin/main/MainScreen.vue';
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -27,12 +29,10 @@ import CompaniesEdit from './components/companies/CompaniesEdit.vue';
 
 
 const routes = [
-    {
-        path: '/',
-        components: {
-            companiesIndex: CompaniesIndex
-        }
-    },
+
+    {path: '/', component: MainScreen, name: 'mainScreen'},
+
+    {path: '/companies', component: CompaniesIndex, name: 'companiesIndex'},
     {path: '/create', component: CompaniesCreate, name: 'createCompany'},
     {path: '/edit/:id', component: CompaniesEdit, name: 'editCompany'},
 ]
