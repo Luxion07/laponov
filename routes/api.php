@@ -20,4 +20,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::group(['prefix' => '/v1', 'namespace' => 'Api\V1', 'as' => 'api.'], function () {
     Route::resource('companies', 'CompaniesController', ['except' => ['create', 'edit']]);
+	Route::get('information', 'InformationController@index');
+	Route::post('information/save', 'InformationController@saveInfo');
 });

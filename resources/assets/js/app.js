@@ -14,11 +14,12 @@ import VueRouter from 'vue-router';
 window.Vue.use(VueRouter);
 
 
-import CompaniesIndex from './components/companies/CompaniesIndex.vue';
-import CompaniesCreate from './components/companies/CompaniesCreate.vue';
-import CompaniesEdit from './components/companies/CompaniesEdit.vue';
-
 import MainScreen from './components/admin/main/MainScreen.vue';
+import infoIndex from './components/admin/information/infoIndex.vue';
+
+import CompaniesIndex from './components/companies/CompaniesIndex.vue';
+import CompaniesEdit from './components/companies/CompaniesEdit.vue';
+import CompaniesCreate from './components/companies/CompaniesCreate.vue';
 
 
 /**
@@ -31,6 +32,7 @@ import MainScreen from './components/admin/main/MainScreen.vue';
 const routes = [
 
     {path: '/', component: MainScreen, name: 'mainScreen'},
+    {path: '/information', component: infoIndex, name: 'infoindex'},
 
     {path: '/companies', component: CompaniesIndex, name: 'companiesIndex'},
     {path: '/create', component: CompaniesCreate, name: 'createCompany'},
